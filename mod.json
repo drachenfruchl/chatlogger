@@ -1,0 +1,71 @@
+{
+    "Name": "Chatlogger",
+    "Description": "[[@drachenfruchl]]\n\nLogs all messages and saves them to file(s)",
+    "Version": "1.3.0",
+    "LoadPriority": 69420,
+    "Scripts": [
+        {
+            "Path": "logger.nut",
+            "RunOn": "CLIENT && MP",
+            "ClientCallback": {
+                "After": "logger_Init"
+            }
+        },
+        {
+            "Path": "loggerSettings.nut",
+            "RunOn": "UI",
+            "UICallback": {
+                "Before": "loggerSettings_Init"
+            }
+        }
+    ],
+    "ConVars": [
+        {
+            "Name": "cv_logger_logToFullFile",
+            "DefaultValue": "1",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_logToIndividualMapFiles",
+            "DefaultValue": "0",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_clearFullFileOnLaunch",
+            "DefaultValue": "0",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_hasClearedFullFile",
+            "DefaultValue": "0"
+        },
+        {
+            "Name": "cv_logger_timezone",
+            "DefaultValue": "14",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_localizeMapName",
+            "DefaultValue": "1",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_doMessageTimestampPrefix",
+            "DefaultValue": "1",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_useMatchTime",
+            "DefaultValue": "0",
+            "Flags": 16777216
+        },
+        {
+            "Name": "cv_logger_appendGamemodeToFilename",
+            "DefaultValue": "0",
+            "Flags": 16777216
+        }
+    ],
+    "Dependencies": {
+        "HAS_TOOLS": "drachenfruchl.tools"
+    }
+}
