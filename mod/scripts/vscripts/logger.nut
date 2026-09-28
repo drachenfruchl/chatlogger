@@ -42,7 +42,7 @@ void function logger_Init(){
         return
     #endif
 
-    if( !GetConVarBool( "logger_hasClearedFullFile" ) && GetConVarBool( "cv_logger_clearFullFileOnLaunch" ) ){
+    if( !GetConVarBool( "cv_logger_hasClearedFullFile" ) && GetConVarBool( "cv_logger_clearFullFileOnLaunch" ) ){
         NSSaveFile( file.path_fullFile, "" )
         SetConVarBool( "cv_logger_hasClearedFullFile", true )
     }
