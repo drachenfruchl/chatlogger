@@ -11,7 +11,7 @@ const array<string> timezones = [
 void function loggerSettings_Init(){
     ModSettings_AddModTitle(    "^FFFFFF00Chatlogger" )
 
-    #if HAS_TOOLS
+    #if !HAS_TOOLS
     ModSettings_AddModCategory( " > Download dependency" )
         ModSettings_AddButton( "[ drachenfruchl.tools ]", void function():(){ LaunchExternalWebBrowser( "https://github.com/drachenfruchl/tools", WEBBROWSER_FLAG_FORCEEXTERNAL ) } )
     #endif
